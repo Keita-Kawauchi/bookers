@@ -1,0 +1,19 @@
+<%= form_for @book do |f| %>
+  <% if @book.errors.any? %>
+   <h3>Error happened</h3>
+    <ul>
+      <% @book.errors.full_messages.each do |message| %>
+        <li><%= book %></li>
+      <% end %>
+    </ul>
+  <% end %>
+  <% end %>
+ 
+  <p>
+  <%= f.label :title, :body %>
+  <%= f.text_field :name %>
+  </p>
+ 
+  #以下省略 
+ 
+<% end %>
